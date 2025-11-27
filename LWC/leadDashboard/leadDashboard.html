@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Lead Dashboard">
+        <template if:true={leads.data}>
+            <template for:each={leads.data} for:item="lead">
+                <p key={lead.Id}>
+                    {lead.Name} — {lead.Status}
+                </p>
+            </template>
+        </template>
+    </lightning-card>
+</template>
